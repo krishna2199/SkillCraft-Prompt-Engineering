@@ -1,0 +1,10 @@
+{
+  "meeting_date": "2026-06-01",
+  "action_items": [
+    {"keyword": "design spec", "owner": "Grace", "due_date": ["2026-06-15"]},
+    {"keyword": "risk note", "owner": "Felix", "due_date": ["2026-06-05"]},
+    {"keyword": "support", "owner": null, "due_date": [null]}
+  ],
+  "decisions": {"min": 1, "max": 2, "must_mention": ["v2.4"]},
+  "open_questions": {"min": 1, "max": 1}
+}

@@ -1,0 +1,7 @@
+[held-out test input, written after prompt v5 was frozen]
+#mobile-app channel, standup recap 2026-08-18
+@nina: android build is green again. pushing the release candidate to testers today, done by 2026-08-19
+@kofi: I'll fix the crash on the login screen, should be done 2026-08-21
+@nina: we're dropping the tablet layout from this release, everyone ok? -> yes from all
+@kofi: who is writing release notes? -> no one yet
+@lucas: is the analytics SDK update safe to ship this week?

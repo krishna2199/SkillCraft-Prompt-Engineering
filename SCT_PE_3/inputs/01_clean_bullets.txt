@@ -1,0 +1,10 @@
+Meeting: Website relaunch weekly sync
+Date: 2026-03-02
+Attendees: Priya, Daniel, Mei
+
+- Reviewed the new homepage mock-ups. Everyone agreed to go with version B.
+- Decision: launch date stays at 2026-03-20.
+- Daniel to finish the contact form integration by 2026-03-09.
+- Mei will write alt text for all product images by 2026-03-12.
+- Priya to book the usability test participants by 2026-03-06.
+- Open question: do we need a cookie banner for the new analytics tool?

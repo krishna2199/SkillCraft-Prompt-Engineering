@@ -1,0 +1,12 @@
+{
+  "meeting_title": "Follow-up from Thursday's budget review",
+  "meeting_date": "2026-07-09",
+  "attendees": ["Ravi", "Chen"],
+  "summary": "Approval for Q3 marketing budget and action items for Q4 review",
+  "decisions": ["Events budget for Q4 is pending"],
+  "action_items": [
+    {"task": "Send revised vendor list to finance by 2026-07-14", "owner": "Ravi"},
+    {"task": "Prepare CRM tools comparison and share by 2026-07-23", "owner": "Chen"}
+  ],
+  "open_questions": ["Whether the events budget can move to Q4"]
+}

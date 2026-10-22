@@ -1,0 +1,29 @@
+{
+  "meeting_title": "Follow-up from Thursday's budget review",
+  "meeting_date": "2026-07-09",
+  "attendees": [
+    "Ravi",
+    "Chen"
+  ],
+  "summary": "Agreed on Q3 marketing budget and vendor list, and prepared CRM tool comparison; events budget still undecided.",
+  "decisions": [
+    "Marketing budget for Q3 approved at Q2 level",
+    "Ravi to send revised vendor list to finance by 2026-07-14",
+    "Chen to prepare CRM tool comparison and share by 2026-07-23"
+  ],
+  "action_items": [
+    {
+      "task": "Send revised vendor list to finance by 2026-07-14",
+      "owner": "Ravi",
+      "due_date": "2026-07-14"
+    },
+    {
+      "task": "Prepare CRM tool comparison and share by 2026-07-23",
+      "owner": "Chen",
+      "due_date": "2026-07-23"
+    }
+  ],
+  "open_questions": [
+    "Whether the events budget can move to Q4"
+  ]
+}

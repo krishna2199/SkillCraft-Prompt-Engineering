@@ -1,0 +1,13 @@
+{
+  "meeting_title": "Call with the client (Mon 2026-04-13)",
+  "meeting_date": "2026-04-13",
+  "attendees": ["Arjun", "Sofia", "Tom"],
+  "summary": "Client requested changes to invoice template and agreed not to change payment terms.",
+  "decisions": ["Agreed NOT to change payment terms (still 30 days)"],
+  "action_items": [
+    {"task": "Fix invoice template", "owner": "Tom", "due_date": "2026-04-17"},
+    {"task": "Check support for PDF + CSV export", "owner": "Arjun", "due_date": "2026-04-15"},
+    {"task": "Reply to Sofia about export support", "owner": null, "due_date": null}
+  ],
+  "open_questions": ["Update the FAQ page"]
+}

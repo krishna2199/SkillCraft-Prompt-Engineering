@@ -1,0 +1,7 @@
+notes from today's call w/ the client (Mon 2026-04-13) - me (Arjun), Sofia from client side, and Tom
+
+sofia says the invoice template is confusing, wants the total in bold + tax line separate
+tom thinks we can do it by end of week -> tom owns template fix, due fri 2026-04-17
+we agreed NOT to change the payment terms for now (still 30 days)
+also sofia asked if we support PDF + CSV export. not sure. arjun to check with the dev team and reply to sofia by wed 2026-04-15
+someone needs to update the FAQ page at some point, nobody picked it up

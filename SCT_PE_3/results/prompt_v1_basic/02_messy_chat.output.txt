@@ -1,0 +1,28 @@
+Here is the summarized JSON for the meeting notes:
+
+```json
+{
+  "decisions": [
+    {
+      "description": "Invoice template changes",
+      "details": "The invoice template will have the total in bold and the tax line separated. This will be done by Tom and is due by Friday, 2026-04-17."
+    },
+    {
+      "description": "Payment terms",
+      "details": "The payment terms will remain unchanged (30 days)."
+    },
+    {
+      "description": "PDF and CSV export support",
+      "details": "Sofia asked about support for PDF and CSV export. Arjun will check with the development team and provide a response to Sofia by Wednesday, 2026-04-15."
+    }
+  ],
+  "action_items": [
+    {
+      "description": "Update FAQ page",
+      "details": "Someone needs to update the FAQ page at some point. No one has picked this up yet."
+    }
+  ]
+}
+```
+
+This JSON structure captures the decisions made during the meeting and the action items that need to be addressed.

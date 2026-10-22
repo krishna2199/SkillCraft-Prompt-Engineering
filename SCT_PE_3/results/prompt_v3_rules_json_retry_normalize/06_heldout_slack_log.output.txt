@@ -1,0 +1,13 @@
+{
+  "meeting_title": "2026-08-18 mobile-app channel standup recap",
+  "meeting_date": "2026-08-18",
+  "attendees": ["nina", "kofi", "lucas"],
+  "summary": "Android build green, release candidate for testers today; tablet layout drop confirmed; release notes writing not started; analytics SDK update timing discussed",
+  "decisions": ["tablet layout drop confirmed"],
+  "action_items": [
+    {"task": "Fix the crash on the login screen", "owner": "kofi", "due_date": "2026-08-21"},
+    {"task": "Writing release notes", "owner": null, "due_date": null},
+    {"task": "Determine timing for analytics SDK update", "owner": null, "due_date": null}
+  ],
+  "open_questions": ["Who is writing release notes?"]
+}

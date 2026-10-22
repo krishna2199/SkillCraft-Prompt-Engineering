@@ -1,0 +1,3 @@
+Summarize these meeting notes as JSON. Include the decisions and action items.
+
+{notes}

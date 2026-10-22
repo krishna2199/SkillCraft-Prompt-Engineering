@@ -1,0 +1,8 @@
+[held-out test input, written after prompt v5 was frozen]
+Hiring panel debrief, 2026-09-03
+Panel: Aisha, Marco, Yuki
+
+We first agreed to make an offer to candidate B. After Yuki shared reference feedback, we changed our minds and agreed to invite candidate B for a second technical interview instead.
+Marco will schedule the second interview next week.
+Aisha to send the reference summary to HR by 2026-09-05.
+Still open: should the second interview include a take-home task?

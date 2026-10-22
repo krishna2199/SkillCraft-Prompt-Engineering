@@ -1,0 +1,30 @@
+Here is the summarized content of the meeting notes in JSON format, including the decisions and action items:
+
+```json
+{
+  "meeting_notes": {
+    "participants": ["Hannah", "Ravi", "Chen"],
+    "date": "2026-07-09",
+    "summary": "Quick recap of what was agreed on Thursday for the budget review for Q3 2026.",
+    "decisions": [
+      "The marketing budget for Q3 is approved at the same level as Q2."
+    ],
+    "action_items": [
+      {
+        "performer": "Ravi",
+        "task": "Send the revised vendor list to finance by 2026-07-14."
+      },
+      {
+        "performer": "Chen",
+        "task": "Prepare a comparison of two CRM tools and share it before the next review on 2026-07-23."
+      },
+      {
+        "performer": "Hannah",
+        "task": "Still need an answer on whether the events budget can move to Q4."
+      }
+    ]
+  }
+}
+```
+
+This JSON structure captures the key points of the meeting, including the participants, date, summary, decisions, and action items.

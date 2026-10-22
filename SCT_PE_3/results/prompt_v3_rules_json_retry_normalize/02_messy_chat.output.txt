@@ -1,0 +1,24 @@
+{
+  "meeting_title": "Client Invoice Template Meeting",
+  "meeting_date": "2026-04-13",
+  "attendees": ["Arjun", "Sofia", "Tom"],
+  "summary": "Agreed to keep payment terms unchanged and to update invoice template by end of week",
+  "decisions": ["Agreed NOT to change payment terms"],
+  "action_items": [
+    {
+      "task": "Update invoice template to have total in bold and separate tax line",
+      "owner": "Tom",
+      "due_date": "2026-04-17"
+    },
+    {
+      "task": "Check if PDF and CSV export supported and reply to Sofia by Wed 2026-04-15",
+      "owner": "Arjun",
+      "due_date": "2026-04-15"
+    },
+    {
+      "task": "Update FAQ page",
+      "owner": null
+    }
+  ],
+  "open_questions": ["Who will update the FAQ page?"]
+}

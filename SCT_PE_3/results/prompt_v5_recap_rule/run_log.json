@@ -1,0 +1,606 @@
+{
+  "environment": {
+    "runtime": "Ollama (local)",
+    "ollama_version": "0.40.6",
+    "model": "qwen2.5:3b",
+    "model_digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b"
+  },
+  "prompt_file": "prompts/prompt_v5_recap_rule.txt",
+  "json_mode": false,
+  "retry": false,
+  "normalize": false,
+  "runs": [
+    {
+      "input": "01_clean_bullets.txt",
+      "attempts": [
+        {
+          "response": "{\n  \"meeting_title\": \"Website relaunch weekly sync\",\n  \"meeting_date\": \"2026-03-02\",\n  \"attendees\": [\"Priya\", \"Daniel\", \"Mei\"],\n  \"summary\": \"Agreed on launch date and assigned tasks for contact form integration, alt text writing, and usability test participants.\",\n  \"decisions\": [\"Launch date: 2026-03-20\"],\n  \"action_items\": [\n    {\"task\": \"Finish contact form integration\", \"owner\": \"Daniel\", \"due_date\": \"2026-03-09\"},\n    {\"task\": \"Write alt text for product images\", \"owner\": \"Mei\", \"due_date\": \"2026-03-12\"},\n    {\"task\": \"Book usability test participants\", \"owner\": \"Priya\", \"due_date\": \"2026-03-06\"}\n  ],\n  \"open_questions\": [\"Do we need a cookie banner for the new analytics tool?\"]\n}",
+          "errors": [],
+          "normalized_keys": [],
+          "meta": {
+            "model": "qwen2.5:3b",
+            "options": {
+              "temperature": 0,
+              "seed": 42,
+              "num_predict": 1024
+            },
+            "json_mode": false,
+            "started_utc": "2026-10-22T13:37:58+00:00",
+            "eval_tokens": 223,
+            "prompt_tokens": 863,
+            "total_seconds": 53.32,
+            "done_reason": "stop"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "check": "meeting_date",
+          "passed": true,
+          "detail": "got '2026-03-02'"
+        },
+        {
+          "check": "action_item_count",
+          "passed": true,
+          "detail": "got 3, expected 3"
+        },
+        {
+          "check": "action 'contact form' found",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "action 'contact form' owner",
+          "passed": true,
+          "detail": "got 'Daniel'"
+        },
+        {
+          "check": "action 'contact form' due_date",
+          "passed": true,
+          "detail": "got '2026-03-09'"
+        },
+        {
+          "check": "action 'alt text' found",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "action 'alt text' owner",
+          "passed": true,
+          "detail": "got 'Mei'"
+        },
+        {
+          "check": "action 'alt text' due_date",
+          "passed": true,
+          "detail": "got '2026-03-12'"
+        },
+        {
+          "check": "action 'participant' found",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "action 'participant' owner",
+          "passed": true,
+          "detail": "got 'Priya'"
+        },
+        {
+          "check": "action 'participant' due_date",
+          "passed": true,
+          "detail": "got '2026-03-06'"
+        },
+        {
+          "check": "decision_count",
+          "passed": false,
+          "detail": "got 1, expected 2-2"
+        },
+        {
+          "check": "decision mentions '2026-03-20'",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "open_question_count",
+          "passed": true,
+          "detail": "got 1, expected 1-1"
+        }
+      ]
+    },
+    {
+      "input": "02_messy_chat.txt",
+      "attempts": [
+        {
+          "response": "{\n  \"meeting_title\": \"Call with the client (Mon 2026-04-13)\",\n  \"meeting_date\": \"2026-04-13\",\n  \"attendees\": [\"Arjun\", \"Sofia\", \"Tom\"],\n  \"summary\": \"Client requested changes to invoice template and agreed not to change payment terms.\",\n  \"decisions\": [\"Agreed NOT to change payment terms (still 30 days)\"],\n  \"action_items\": [\n    {\"task\": \"Fix invoice template\", \"owner\": \"Tom\", \"due_date\": \"2026-04-17\"},\n    {\"task\": \"Check support for PDF + CSV export\", \"owner\": \"Arjun\", \"due_date\": \"2026-04-15\"},\n    {\"task\": \"Reply to Sofia about export support\", \"owner\": null, \"due_date\": null}\n  ],\n  \"open_questions\": [\"Update the FAQ page\"]\n}",
+          "errors": [],
+          "normalized_keys": [],
+          "meta": {
+            "model": "qwen2.5:3b",
+            "options": {
+              "temperature": 0,
+              "seed": 42,
+              "num_predict": 1024
+            },
+            "json_mode": false,
+            "started_utc": "2026-10-22T13:38:54+00:00",
+            "eval_tokens": 210,
+            "prompt_tokens": 876,
+            "total_seconds": 37.03,
+            "done_reason": "stop"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "check": "meeting_date",
+          "passed": true,
+          "detail": "got '2026-04-13'"
+        },
+        {
+          "check": "action_item_count",
+          "passed": true,
+          "detail": "got 3, expected 3"
+        },
+        {
+          "check": "action 'template' found",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "action 'template' owner",
+          "passed": true,
+          "detail": "got 'Tom'"
+        },
+        {
+          "check": "action 'template' due_date",
+          "passed": true,
+          "detail": "got '2026-04-17'"
+        },
+        {
+          "check": "action 'export' found",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "action 'export' owner",
+          "passed": true,
+          "detail": "got 'Arjun'"
+        },
+        {
+          "check": "action 'export' due_date",
+          "passed": true,
+          "detail": "got '2026-04-15'"
+        },
+        {
+          "check": "action 'FAQ' found",
+          "passed": false,
+          "detail": "no task mentions keyword"
+        },
+        {
+          "check": "action 'FAQ' owner",
+          "passed": false,
+          "detail": "item missing"
+        },
+        {
+          "check": "action 'FAQ' due_date",
+          "passed": false,
+          "detail": "item missing"
+        },
+        {
+          "check": "decision_count",
+          "passed": true,
+          "detail": "got 1, expected 1-1"
+        },
+        {
+          "check": "decision mentions '30'",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "open_question_count",
+          "passed": true,
+          "detail": "got 1, expected 0-1"
+        }
+      ]
+    },
+    {
+      "input": "03_no_actions.txt",
+      "attempts": [
+        {
+          "response": "{\n  \"meeting_title\": \"Quarterly all-hands (information session)\",\n  \"meeting_date\": \"2026-05-07\",\n  \"attendees\": [\"Whole team (about 25 people)\", \"hosted by Lena\"],\n  \"summary\": \"Lena presented Q1 results and announced new office policies.\",\n  \"decisions\": [],\n  \"action_items\": [],\n  \"open_questions\": []\n}",
+          "errors": [],
+          "normalized_keys": [],
+          "meta": {
+            "model": "qwen2.5:3b",
+            "options": {
+              "temperature": 0,
+              "seed": 42,
+              "num_predict": 1024
+            },
+            "json_mode": false,
+            "started_utc": "2026-10-22T13:39:33+00:00",
+            "eval_tokens": 91,
+            "prompt_tokens": 818,
+            "total_seconds": 18.27,
+            "done_reason": "stop"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "check": "meeting_date",
+          "passed": true,
+          "detail": "got '2026-05-07'"
+        },
+        {
+          "check": "action_item_count",
+          "passed": true,
+          "detail": "got 0, expected 0"
+        },
+        {
+          "check": "decision_count",
+          "passed": true,
+          "detail": "got 0, expected 0-0"
+        },
+        {
+          "check": "open_question_count",
+          "passed": true,
+          "detail": "got 0, expected 0-0"
+        }
+      ]
+    },
+    {
+      "input": "04_changed_decision.txt",
+      "attempts": [
+        {
+          "response": "{\n  \"meeting_title\": \"Product team meeting\",\n  \"meeting_date\": \"2026-06-01\",\n  \"attendees\": [\"Omar (PM)\", \"Grace (design)\", \"Felix (backend)\"],\n  \"summary\": \"The team decided to delay dark mode to v2.4 and v2.3 will ship with bug fixes only.\",\n  \"decisions\": [\"Delay dark mode to v2.4\", \"v2.3 will ship with bug fixes only\"],\n  \"action_items\": [\n    {\"task\": \"Update v2.4 design specs for dark mode\", \"owner\": \"Grace\", \"due_date\": \"2026-06-15\"},\n    {\"task\": \"Write a short risk note about the theming refactor\", \"owner\": \"Felix\", \"due_date\": \"2026-06-05\"}\n  ],\n  \"open_questions\": [\"Should dark mode follow the OS setting by default?\"]\n}",
+          "errors": [],
+          "normalized_keys": [],
+          "meta": {
+            "model": "qwen2.5:3b",
+            "options": {
+              "temperature": 0,
+              "seed": 42,
+              "num_predict": 1024
+            },
+            "json_mode": false,
+            "started_utc": "2026-10-22T13:39:53+00:00",
+            "eval_tokens": 211,
+            "prompt_tokens": 876,
+            "total_seconds": 36.54,
+            "done_reason": "stop"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "check": "meeting_date",
+          "passed": true,
+          "detail": "got '2026-06-01'"
+        },
+        {
+          "check": "action_item_count",
+          "passed": false,
+          "detail": "got 2, expected 3"
+        },
+        {
+          "check": "action 'design spec' found",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "action 'design spec' owner",
+          "passed": true,
+          "detail": "got 'Grace'"
+        },
+        {
+          "check": "action 'design spec' due_date",
+          "passed": true,
+          "detail": "got '2026-06-15'"
+        },
+        {
+          "check": "action 'risk note' found",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "action 'risk note' owner",
+          "passed": true,
+          "detail": "got 'Felix'"
+        },
+        {
+          "check": "action 'risk note' due_date",
+          "passed": true,
+          "detail": "got '2026-06-05'"
+        },
+        {
+          "check": "action 'support' found",
+          "passed": false,
+          "detail": "no task mentions keyword"
+        },
+        {
+          "check": "action 'support' owner",
+          "passed": false,
+          "detail": "item missing"
+        },
+        {
+          "check": "action 'support' due_date",
+          "passed": false,
+          "detail": "item missing"
+        },
+        {
+          "check": "decision_count",
+          "passed": true,
+          "detail": "got 2, expected 1-2"
+        },
+        {
+          "check": "decision mentions 'v2.4'",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "open_question_count",
+          "passed": true,
+          "detail": "got 1, expected 1-1"
+        }
+      ]
+    },
+    {
+      "input": "05_email_thread.txt",
+      "attempts": [
+        {
+          "response": "{\n  \"meeting_title\": \"Follow-up from Thursday's budget review\",\n  \"meeting_date\": \"2026-07-09\",\n  \"attendees\": [\"Ravi\", \"Chen\"],\n  \"summary\": \"Agreed on Q3 marketing budget and vendor list, and CRM tool comparison; events budget still undecided.\",\n  \"decisions\": [\"Marketing budget for Q3 approved at Q2 level\", \"Ravi: send revised vendor list to finance by 2026-07-14\", \"Chen: prepare CRM tool comparison and share before 2026-07-23\"],\n  \"action_items\": [\n    {\"task\": \"Events budget: determine Q4 or Q3 allocation\", \"owner\": null, \"due_date\": null}\n  ],\n  \"open_questions\": [\"Whether the events budget can move to Q4\"]\n}",
+          "errors": [],
+          "normalized_keys": [],
+          "meta": {
+            "model": "qwen2.5:3b",
+            "options": {
+              "temperature": 0,
+              "seed": 42,
+              "num_predict": 1024
+            },
+            "json_mode": false,
+            "started_utc": "2026-10-22T13:40:32+00:00",
+            "eval_tokens": 187,
+            "prompt_tokens": 854,
+            "total_seconds": 32.75,
+            "done_reason": "stop"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "check": "meeting_date",
+          "passed": true,
+          "detail": "got '2026-07-09'"
+        },
+        {
+          "check": "action_item_count",
+          "passed": false,
+          "detail": "got 1, expected 2"
+        },
+        {
+          "check": "action 'vendor list' found",
+          "passed": false,
+          "detail": "no task mentions keyword"
+        },
+        {
+          "check": "action 'vendor list' owner",
+          "passed": false,
+          "detail": "item missing"
+        },
+        {
+          "check": "action 'vendor list' due_date",
+          "passed": false,
+          "detail": "item missing"
+        },
+        {
+          "check": "action 'CRM' found",
+          "passed": false,
+          "detail": "no task mentions keyword"
+        },
+        {
+          "check": "action 'CRM' owner",
+          "passed": false,
+          "detail": "item missing"
+        },
+        {
+          "check": "action 'CRM' due_date",
+          "passed": false,
+          "detail": "item missing"
+        },
+        {
+          "check": "decision_count",
+          "passed": false,
+          "detail": "got 3, expected 1-1"
+        },
+        {
+          "check": "decision mentions 'Q3'",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "open_question_count",
+          "passed": true,
+          "detail": "got 1, expected 1-1"
+        }
+      ]
+    },
+    {
+      "input": "06_heldout_slack_log.txt",
+      "attempts": [
+        {
+          "response": "{\n  \"meeting_title\": \"mobile-app channel standup recap\",\n  \"meeting_date\": \"2026-08-18\",\n  \"attendees\": [\"nina\", \"kofi\", \"lucas\"],\n  \"summary\": \"Android build green, release candidate for testers, tablet layout drop, release notes pending, analytics SDK update safety check.\",\n  \"decisions\": [\"Dropping the tablet layout from this release\"],\n  \"action_items\": [\n    {\"task\": \"Fix the crash on the login screen\", \"owner\": \"kofi\", \"due_date\": \"2026-08-21\"},\n    {\"task\": \"Determine who writes release notes\", \"owner\": null, \"due_date\": null},\n    {\"task\": \"Check the analytics SDK update safety\", \"owner\": \"lucas\", \"due_date\": null}\n  ],\n  \"open_questions\": [\"Is the analytics SDK update safe to ship this week?\"]\n}",
+          "errors": [],
+          "normalized_keys": [],
+          "meta": {
+            "model": "qwen2.5:3b",
+            "options": {
+              "temperature": 0,
+              "seed": 42,
+              "num_predict": 1024
+            },
+            "json_mode": false,
+            "started_utc": "2026-10-22T13:41:07+00:00",
+            "eval_tokens": 203,
+            "prompt_tokens": 861,
+            "total_seconds": 34.14,
+            "done_reason": "stop"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "check": "meeting_date",
+          "passed": true,
+          "detail": "got '2026-08-18'"
+        },
+        {
+          "check": "action_item_count",
+          "passed": true,
+          "detail": "got 3, expected 3"
+        },
+        {
+          "check": "action 'release candidate' found",
+          "passed": false,
+          "detail": "no task mentions keyword"
+        },
+        {
+          "check": "action 'release candidate' owner",
+          "passed": false,
+          "detail": "item missing"
+        },
+        {
+          "check": "action 'release candidate' due_date",
+          "passed": false,
+          "detail": "item missing"
+        },
+        {
+          "check": "action 'crash' found",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "action 'crash' owner",
+          "passed": true,
+          "detail": "got 'kofi'"
+        },
+        {
+          "check": "action 'crash' due_date",
+          "passed": true,
+          "detail": "got '2026-08-21'"
+        },
+        {
+          "check": "action 'release notes' found",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "action 'release notes' owner",
+          "passed": true,
+          "detail": "got None"
+        },
+        {
+          "check": "action 'release notes' due_date",
+          "passed": true,
+          "detail": "got None"
+        },
+        {
+          "check": "decision_count",
+          "passed": true,
+          "detail": "got 1, expected 1-1"
+        },
+        {
+          "check": "decision mentions 'tablet'",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "open_question_count",
+          "passed": true,
+          "detail": "got 1, expected 1-1"
+        }
+      ]
+    },
+    {
+      "input": "07_heldout_reversal.txt",
+      "attempts": [
+        {
+          "response": "{\n  \"meeting_title\": \"Hiring panel debrief\",\n  \"meeting_date\": \"2026-09-03\",\n  \"attendees\": [\"Aisha\", \"Marco\", \"Yuki\"],\n  \"summary\": \"Panel decided to invite candidate B for a second technical interview instead of making an offer.\",\n  \"decisions\": [\"Change decision to invite candidate B for a second technical interview\"],\n  \"action_items\": [\n    {\"task\": \"Schedule the second interview next week\", \"owner\": \"Marco\", \"due_date\": null},\n    {\"task\": \"Send the reference summary to HR by 2026-09-05\", \"owner\": \"Aisha\", \"due_date\": \"2026-09-05\"},\n    {\"task\": \"Determine if the second interview should include a take-home task\", \"owner\": null, \"due_date\": null}\n  ],\n  \"open_questions\": [\"Should the second interview include a take-home task?\"]\n}",
+          "errors": [],
+          "normalized_keys": [],
+          "meta": {
+            "model": "qwen2.5:3b",
+            "options": {
+              "temperature": 0,
+              "seed": 42,
+              "num_predict": 1024
+            },
+            "json_mode": false,
+            "started_utc": "2026-10-22T13:41:43+00:00",
+            "eval_tokens": 213,
+            "prompt_tokens": 835,
+            "total_seconds": 33.29,
+            "done_reason": "stop"
+          }
+        }
+      ],
+      "checks": [
+        {
+          "check": "meeting_date",
+          "passed": true,
+          "detail": "got '2026-09-03'"
+        },
+        {
+          "check": "action_item_count",
+          "passed": false,
+          "detail": "got 3, expected 2"
+        },
+        {
+          "check": "action 'schedule' found",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "action 'schedule' owner",
+          "passed": true,
+          "detail": "got 'Marco'"
+        },
+        {
+          "check": "action 'schedule' due_date",
+          "passed": true,
+          "detail": "got None"
+        },
+        {
+          "check": "action 'reference' found",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "action 'reference' owner",
+          "passed": true,
+          "detail": "got 'Aisha'"
+        },
+        {
+          "check": "action 'reference' due_date",
+          "passed": true,
+          "detail": "got '2026-09-05'"
+        },
+        {
+          "check": "decision_count",
+          "passed": true,
+          "detail": "got 1, expected 1-1"
+        },
+        {
+          "check": "decision mentions 'second'",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "check": "open_question_count",
+          "passed": true,
+          "detail": "got 1, expected 1-1"
+        }
+      ]
+    }
+  ]
+}

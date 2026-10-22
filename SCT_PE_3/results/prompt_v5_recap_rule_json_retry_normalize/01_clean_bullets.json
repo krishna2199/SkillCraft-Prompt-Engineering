@@ -1,0 +1,33 @@
+{
+  "meeting_title": "Website relaunch weekly sync",
+  "meeting_date": "2026-03-02",
+  "attendees": [
+    "Priya",
+    "Daniel",
+    "Mei"
+  ],
+  "summary": "Agreed on launch date and assigned tasks for contact form integration, alt text writing, and usability test participants.",
+  "decisions": [
+    "Launch date: 2026-03-20"
+  ],
+  "action_items": [
+    {
+      "task": "Finish contact form integration",
+      "owner": "Daniel",
+      "due_date": "2026-03-09"
+    },
+    {
+      "task": "Write alt text for all product images",
+      "owner": "Mei",
+      "due_date": "2026-03-12"
+    },
+    {
+      "task": "Book usability test participants",
+      "owner": "Priya",
+      "due_date": "2026-03-06"
+    }
+  ],
+  "open_questions": [
+    "Do we need a cookie banner for the new analytics tool?"
+  ]
+}

@@ -1,0 +1,33 @@
+﻿You are "Spark", a witty but practical startup mentor who writes short, vivid pitch cards. Study the three example pitch cards below. Copy their STYLE (format, length, playful tone, concrete details) but NOT their ideas.
+
+Example 1
+Name: RefillRoute
+Hook: "Your shampoo bottle deserves a second life."
+Problem: People want to buy refills of household essentials but cannot easily find nearby refill stations.
+Who it's for: Eco-conscious renters in cities.
+How it works: A live map of refill stations with stock levels, prices, and a bring-your-own-container checklist.
+Three features: real-time stock alerts; price comparison per 100 ml; a "refill streak" that tracks plastic saved.
+Money: Listing fees from stores plus a small commission on reserved refills.
+Why it's different: It treats refilling as a habit to build, not a one-off errand.
+
+Example 2
+Name: ShiftSwap
+Hook: "Trade a Tuesday for a Friday in two taps."
+Problem: Hourly workers lose wages when they cannot easily swap shifts with qualified colleagues.
+Who it's for: Staff and managers at cafes, clinics, and retail stores.
+How it works: Workers post shifts they cannot take; the app suggests colleagues with matching skills and sends the swap to the manager for one-tap approval.
+Three features: skill-matched suggestions; overtime-limit warnings; an approval log for payroll.
+Money: Monthly subscription per store location.
+Why it's different: It solves the swap and the compliance check in one step.
+
+Example 3
+Name: PantryPal Pact
+Hook: "Leftovers, meet your neighbours."
+Problem: Small restaurants throw away safe surplus food at closing time.
+Who it's for: Independent restaurants and nearby students on a budget.
+How it works: At closing, restaurants list surplus portions; nearby users reserve and collect them at a discount within 30 minutes.
+Three features: closing-time alerts; pickup QR codes; a monthly "food saved" report for restaurants.
+Money: A small fee on each reserved portion.
+Why it's different: It is hyper-local and built around the last 30 minutes of the day.
+
+Now write ONE new pitch card in exactly the same format and tone. Choose a problem area that none of the examples cover. Do not reuse the example names, problems, or features.

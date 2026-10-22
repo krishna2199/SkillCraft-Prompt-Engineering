@@ -1,0 +1,7 @@
+# Happy path: clear role and level, three reasonable answers.
+# Candidate turns are authored test inputs; the assistant's replies are generated live.
+I'd like to practise for a data analyst role
+internship
+ANSWER: I've always liked finding patterns in numbers. During my degree I analysed our college canteen sales in Excel and found that lunch queues peaked at 1 pm, so I suggested opening a second counter, which cut waiting time.
+ANSWER: I mostly use SQL and Python with pandas. For a class project I joined two tables of orders and customers in SQL, cleaned missing values in pandas, and built a bar chart of revenue by region to present to the class.
+ANSWER: In a group project our survey data had duplicate responses. I proposed a rule to remove duplicates by email and timestamp, wrote the script, and explained it to the team so everyone trusted the final numbers. We submitted on time and got the top grade.

@@ -1,0 +1,23 @@
+Here is the summarized information from the meeting in JSON format:
+
+```json
+{
+  "title": "Quarterly all-hands (information session)",
+  "date": "2026-05-07",
+  "attendees": "Whole team (about 25 people)",
+  "host": "Lena",
+  "agenda": [
+    "Presented Q1 results: revenue grew compared with Q4 and two new clients signed.",
+    "New office plants arrived.",
+    "The kitchen will be cleaned on Fridays from now on.",
+    "HR reminded everyone that the holiday calendar is on the intranet."
+  ],
+  "decisions": [],
+  "action_items": [
+    "Clean the kitchen on Fridays."
+  ],
+  "notes": "No decisions were made and no tasks were assigned. Questions were answered live."
+}
+```
+
+Please note that there were no decisions or action items mentioned in the meeting notes.

@@ -1,0 +1,29 @@
+{
+  "meeting_title": "Product team meeting",
+  "meeting_date": "2026-06-01",
+  "attendees": [
+    "Omar (PM)",
+    "Grace (design)",
+    "Felix (backend)"
+  ],
+  "summary": "Team reversed decision to ship dark mode in v2.3, moving it to v2.4 with bug fixes.",
+  "decisions": [
+    "Dark mode moves to v2.4",
+    "v2.3 will ship with bug fixes only"
+  ],
+  "action_items": [
+    {
+      "task": "Update v2.4 design specs for dark mode",
+      "owner": "Grace",
+      "due_date": "2026-06-15"
+    },
+    {
+      "task": "Write a short risk note about the theming refactor",
+      "owner": "Felix",
+      "due_date": "2026-06-05"
+    }
+  ],
+  "open_questions": [
+    "Should dark mode follow the OS setting by default?"
+  ]
+}

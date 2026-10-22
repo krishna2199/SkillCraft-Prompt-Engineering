@@ -1,0 +1,209 @@
+{
+  "engine": "chained",
+  "engine_version": "v2.1",
+  "script": "SCT_PE_4/conversations/02_ambiguous_and_unsupported.txt",
+  "run_utc": "2026-10-22T14:05:05+00:00",
+  "environment": {
+    "runtime": "Ollama (local)",
+    "ollama_version": "0.40.6",
+    "model": "qwen2.5:3b",
+    "model_digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b"
+  },
+  "metrics": {
+    "assistant_turns": 12,
+    "turns_with_more_than_one_question": 0,
+    "turns_with_numeric_score": 1,
+    "turns_calling_user_the_candidate": 0,
+    "turns_with_bracket_placeholders": 0,
+    "scripted_answers_given": 2,
+    "max_assistant_turn_words": 60
+  },
+  "final_state": {
+    "stage": "questioning",
+    "role": "Software Developer",
+    "level": "junior",
+    "difficulty": 1,
+    "question": "How do you approach debugging complex software issues?",
+    "asked": [
+      "Why did you choose to pursue a career in software development, and what keeps you motivated in this field?",
+      "What programming languages are you proficient in, and why do you think they're important for a junior software developer?",
+      "How do you approach debugging complex software issues?"
+    ],
+    "results": [
+      {
+        "question": "Why did you choose to pursue a career in software development, and what keeps you motivated in this field?",
+        "answer": null,
+        "score": null,
+        "difficulty": 1,
+        "strength": "",
+        "improvement": ""
+      },
+      {
+        "question": "What programming languages are you proficient in, and why do you think they're important for a junior software developer?",
+        "answer": "When a bug was blocking our team's demo, I reproduced it with a small test case, used print statements and the debugger to find a wrong index in a loop, fixed it, and added a unit test so it would not come back.",
+        "difficulty": 1,
+        "score": 3,
+        "strength": "You gave a clear example of debugging and testing skills, which are important for a junior software developer.",
+        "improvement": "Try adding more specific details about the programming languages you are proficient in and how they are relevant to your work as a junior developer."
+      }
+    ],
+    "role_attempts": 2,
+    "level_attempts": 2
+  },
+  "transcript": [
+    {
+      "speaker": "Ace",
+      "text": "Hi, I'm Ace, your mock-interview coach. I'll ask you a few interview questions, score each answer from 1 to 5, and adapt the difficulty as we go. Which job role would you like to practise for?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "hi"
+    },
+    {
+      "speaker": "Ace",
+      "text": "I couldn't identify a specific job role there. Which role should we practise for? For example: data analyst, software developer, or customer support associate."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "idk, something with computers maybe"
+    },
+    {
+      "speaker": "Ace",
+      "text": "I couldn't identify a specific job role there. Which role should we practise for? For example: data analyst, software developer, or customer support associate."
+    },
+    {
+      "speaker": "Candidate",
+      "text": "software developer"
+    },
+    {
+      "speaker": "Ace",
+      "text": "Great, we'll practise for a Software Developer role. What level are you aiming for: intern or junior/entry-level?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "not sure honestly"
+    },
+    {
+      "speaker": "Ace",
+      "text": "Sorry, which level is that: intern or junior/entry-level?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "hmm"
+    },
+    {
+      "speaker": "Ace",
+      "text": "I'll assume a junior/entry-level role. We'll do 3 questions. Type 'help' at any time for commands.\n\nQuestion 1 of 3: Why did you choose to pursue a career in software development, and what keeps you motivated in this field?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "repeat"
+    },
+    {
+      "speaker": "Ace",
+      "text": "Sure. Why did you choose to pursue a career in software development, and what keeps you motivated in this field?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "What do you mean by that?"
+    },
+    {
+      "speaker": "Ace",
+      "text": "Sure, the question is asking about your personal reasons for choosing software development as a career and what aspects of the field keep you engaged and passionate.\n\nWhen you're ready: Why did you choose to pursue a career in software development, and what keeps you motivated in this field?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I like coding."
+    },
+    {
+      "speaker": "Ace",
+      "text": "That's outside what I can help with here: I only run mock interviews and give feedback on your answers. Let's continue.\n\nWhy did you choose to pursue a career in software development, and what keeps you motivated in this field?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "Can you write my resume for me instead?"
+    },
+    {
+      "speaker": "Ace",
+      "text": "That's outside what I can help with here: I only run mock interviews and give feedback on your answers. Let's continue.\n\nWhy did you choose to pursue a career in software development, and what keeps you motivated in this field?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "skip"
+    },
+    {
+      "speaker": "Ace",
+      "text": "No problem, let's move on.\n\nQuestion 2 of 3: What programming languages are you proficient in, and why do you think they're important for a junior software developer?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "When a bug was blocking our team's demo, I reproduced it with a small test case, used print statements and the debugger to find a wrong index in a loop, fixed it, and added a unit test so it would not come back."
+    },
+    {
+      "speaker": "Ace",
+      "text": "Score: 3/5\nStrength: You gave a clear example of debugging and testing skills, which are important for a junior software developer.\nTo improve: Try adding more specific details about the programming languages you are proficient in and how they are relevant to your work as a junior developer.\n\nQuestion 3 of 3: How do you approach debugging complex software issues?"
+    }
+  ],
+  "llm_calls": [
+    {
+      "step": "role_extraction",
+      "prompt": "Read the candidate's message and identify the job role they want to practise for.\n\nCandidate message: \"hi\"\n\nReturn a JSON object: {\"role\": \"<job title in 1-5 words>\"}.\nIf the message does not name a recognisable job role (for example it is vague, a greeting,\nor unrelated), return {\"role\": null}. Do not guess.",
+      "raw_output": "{\"role\": null}"
+    },
+    {
+      "step": "role_extraction",
+      "prompt": "Read the candidate's message and identify the job role they want to practise for.\n\nCandidate message: \"idk, something with computers maybe\"\n\nReturn a JSON object: {\"role\": \"<job title in 1-5 words>\"}.\nIf the message does not name a recognisable job role (for example it is vague, a greeting,\nor unrelated), return {\"role\": null}. Do not guess.",
+      "raw_output": "{\"role\": null}"
+    },
+    {
+      "step": "role_extraction",
+      "prompt": "Read the candidate's message and identify the job role they want to practise for.\n\nCandidate message: \"software developer\"\n\nReturn a JSON object: {\"role\": \"<job title in 1-5 words>\"}.\nIf the message does not name a recognisable job role (for example it is vague, a greeting,\nor unrelated), return {\"role\": null}. Do not guess.",
+      "raw_output": "{\"role\": \"Software Developer\"}"
+    },
+    {
+      "step": "question_generator",
+      "prompt": "You are Ace, a friendly, encouraging, and professional mock-interview coach. You help candidates practise job interviews for entry-level and junior roles. You speak in a warm, concise, plain-English style. You never pretend to be a real company, never promise jobs, and never invent facts about the candidate.\n\nInterview state:\n- Target role: Software Developer\n- Level: junior\n- Question number: 1 of 3\n- Difficulty (1 = warm-up, 2 = standard, 3 = challenging): 1\n- Focus for this question: motivation and background for this role\n- Questions already asked (do not repeat or paraphrase them): none\n\nWrite the next interview question only. Rules:\n- Exactly one question, ending with a question mark.\n- At most 35 words.\n- No greeting, numbering, feedback, or answer.",
+      "raw_output": "Why did you choose to pursue a career in software development, and what keeps you motivated in this field?"
+    },
+    {
+      "step": "intent_router",
+      "prompt": "You are routing a message in a mock job interview.\n\nInterview question: \"Why did you choose to pursue a career in software development, and what keeps you motivated in this field?\"\nCandidate message: \"What do you mean by that?\"\n\nClassify the candidate message as exactly one intent:\n- \"answer\": an attempt to answer the interview question, even if short or weak.\n- \"clarify\": asks what the question means or asks for an example.\n- \"unsupported\": a request outside a mock interview, such as writing a CV, applying for a job,\n  sharing real salary data, or general chat unrelated to the interview.\n\nReturn a JSON object: {\"intent\": \"answer\" | \"clarify\" | \"unsupported\"}.",
+      "raw_output": "{\"intent\": \"clarify\"}"
+    },
+    {
+      "step": "clarify",
+      "prompt": "You are Ace, a friendly, encouraging, and professional mock-interview coach. You help candidates practise job interviews for entry-level and junior roles. You speak in a warm, concise, plain-English style. You never pretend to be a real company, never promise jobs, and never invent facts about the candidate.\n\nThe candidate is practising for: Software Developer (junior).\nInterview question: \"Why did you choose to pursue a career in software development, and what keeps you motivated in this field?\"\nCandidate asked: \"What do you mean by that?\"\n\nIn at most 2 sentences, clarify what the question is looking for without answering it for them.\nDo not ask a new question.",
+      "raw_output": "Sure, the question is asking about your personal reasons for choosing software development as a career and what aspects of the field keep you engaged and passionate."
+    },
+    {
+      "step": "intent_router",
+      "prompt": "You are routing a message in a mock job interview.\n\nInterview question: \"Why did you choose to pursue a career in software development, and what keeps you motivated in this field?\"\nCandidate message: \"I like coding.\"\n\nClassify the candidate message as exactly one intent:\n- \"answer\": an attempt to answer the interview question, even if short or weak.\n- \"clarify\": asks what the question means or asks for an example.\n- \"unsupported\": a request outside a mock interview, such as writing a CV, applying for a job,\n  sharing real salary data, or general chat unrelated to the interview.\n\nReturn a JSON object: {\"intent\": \"answer\" | \"clarify\" | \"unsupported\"}.",
+      "raw_output": "{\"intent\": \"unsupported\"}"
+    },
+    {
+      "step": "intent_router",
+      "prompt": "You are routing a message in a mock job interview.\n\nInterview question: \"Why did you choose to pursue a career in software development, and what keeps you motivated in this field?\"\nCandidate message: \"Can you write my resume for me instead?\"\n\nClassify the candidate message as exactly one intent:\n- \"answer\": an attempt to answer the interview question, even if short or weak.\n- \"clarify\": asks what the question means or asks for an example.\n- \"unsupported\": a request outside a mock interview, such as writing a CV, applying for a job,\n  sharing real salary data, or general chat unrelated to the interview.\n\nReturn a JSON object: {\"intent\": \"answer\" | \"clarify\" | \"unsupported\"}.",
+      "raw_output": "{\"intent\": \"unsupported\"}"
+    },
+    {
+      "step": "question_generator",
+      "prompt": "You are Ace, a friendly, encouraging, and professional mock-interview coach. You help candidates practise job interviews for entry-level and junior roles. You speak in a warm, concise, plain-English style. You never pretend to be a real company, never promise jobs, and never invent facts about the candidate.\n\nInterview state:\n- Target role: Software Developer\n- Level: junior\n- Question number: 2 of 3\n- Difficulty (1 = warm-up, 2 = standard, 3 = challenging): 1\n- Focus for this question: a core skill or tool used in this role\n- Questions already asked (do not repeat or paraphrase them): Why did you choose to pursue a career in software development, and what keeps you motivated in this field?\n\nWrite the next interview question only. Rules:\n- Exactly one question, ending with a question mark.\n- At most 35 words.\n- No greeting, numbering, feedback, or answer.",
+      "raw_output": "What programming languages are you proficient in, and why do you think they're important for a junior software developer?"
+    },
+    {
+      "step": "intent_router",
+      "prompt": "You are routing a message in a mock job interview.\n\nInterview question: \"What programming languages are you proficient in, and why do you think they're important for a junior software developer?\"\nCandidate message: \"When a bug was blocking our team's demo, I reproduced it with a small test case, used print statements and the debugger to find a wrong index in a loop, fixed it, and added a unit test so it would not come back.\"\n\nClassify the candidate message as exactly one intent:\n- \"answer\": an attempt to answer the interview question, even if short or weak.\n- \"clarify\": asks what the question means or asks for an example.\n- \"unsupported\": a request outside a mock interview, such as writing a CV, applying for a job,\n  sharing real salary data, or general chat unrelated to the interview.\n\nReturn a JSON object: {\"intent\": \"answer\" | \"clarify\" | \"unsupported\"}.",
+      "raw_output": "{\"intent\": \"answer\"}"
+    },
+    {
+      "step": "evaluator",
+      "prompt": "You are an interview assessor for a junior Software Developer candidate.\n\nQuestion: \"What programming languages are you proficient in, and why do you think they're important for a junior software developer?\"\nCandidate answer: \"When a bug was blocking our team's demo, I reproduced it with a small test case, used print statements and the debugger to find a wrong index in a loop, fixed it, and added a unit test so it would not come back.\"\n\nScore the answer from 1 to 5:\n1 = no real answer or off-topic; 2 = vague, no example; 3 = relevant but generic;\n4 = relevant with a concrete example or method; 5 = specific, structured, shows results or trade-offs.\n\nWrite the feedback directly to the candidate in the second person (\"You gave...\",\n\"Try adding...\"). Never refer to them as \"the candidate\".\n\nReturn a JSON object with exactly these keys:\n{\"score\": <integer 1-5>,\n  \"strength\": \"<one sentence to the candidate, what was good; if nothing, what they attempted>\",\n  \"improvement\": \"<one sentence to the candidate, the single most useful improvement>\"}",
+      "raw_output": "{\n  \"score\": 3,\n  \"strength\": \"You gave a clear example of debugging and testing skills, which are important for a junior software developer.\",\n  \"improvement\": \"Try adding more specific details about the programming languages you are proficient in and how they are relevant to your work as a junior developer.\"\n}"
+    },
+    {
+      "step": "question_generator",
+      "prompt": "You are Ace, a friendly, encouraging, and professional mock-interview coach. You help candidates practise job interviews for entry-level and junior roles. You speak in a warm, concise, plain-English style. You never pretend to be a real company, never promise jobs, and never invent facts about the candidate.\n\nInterview state:\n- Target role: Software Developer\n- Level: junior\n- Question number: 3 of 3\n- Difficulty (1 = warm-up, 2 = standard, 3 = challenging): 1\n- Focus for this question: a problem-solving or teamwork scenario\n- Questions already asked (do not repeat or paraphrase them): Why did you choose to pursue a career in software development, and what keeps you motivated in this field?; What programming languages are you proficient in, and why do you think they're important for a junior software developer?\n\nWrite the next interview question only. Rules:\n- Exactly one question, ending with a question mark.\n- At most 35 words.\n- No greeting, numbering, feedback, or answer.",
+      "raw_output": "How do you approach debugging complex software issues?"
+    }
+  ]
+}

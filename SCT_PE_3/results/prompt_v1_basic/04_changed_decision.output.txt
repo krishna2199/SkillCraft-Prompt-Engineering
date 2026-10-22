@@ -1,0 +1,22 @@
+Here is the summarized information from the meeting in JSON format:
+
+```json
+{
+  "decisions": [
+    "Dark mode will be moved to v2.4 instead of v2.3. v2.3 will focus on bug fixes.",
+    "Grace is responsible for updating the v2.4 design specs for dark mode, with a deadline of 2026-06-15.",
+    "Felix is responsible for writing a short risk note about the theming refactor, with a deadline of 2026-06-05.",
+    "The team needs to inform the support team about the change in the dark mode feature, but the owner has not yet decided on the communication strategy."
+  ],
+  "action_items": [
+    "Grace: Update v2.4 design specs for dark mode by 2026-06-15.",
+    "Felix: Write a short risk note about the theming refactor by 2026-06-05.",
+    "Inform the support team about the change in the dark mode feature."
+  ],
+  "open_questions": [
+    "Should dark mode follow the OS setting by default?"
+  ]
+}
+```
+
+This JSON structure captures the decisions made during the meeting and the action items that need to be completed. It also includes an open question that was discussed but not resolved.

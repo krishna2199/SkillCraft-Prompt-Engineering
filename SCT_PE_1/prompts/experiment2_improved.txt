@@ -1,0 +1,3 @@
+Act as a computer science tutor for beginners.
+Explain binary search in simple English using the sorted array [2, 5, 8, 12, 16, 23, 38] to find 16.
+Show each step, explain why half the search space is eliminated, provide pseudocode, state time complexity, and mention that the input must be sorted.

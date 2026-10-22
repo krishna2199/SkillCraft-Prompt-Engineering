@@ -1,0 +1,12 @@
+{
+  "meeting_title": "Hiring panel debrief",
+  "meeting_date": "2026-09-03",
+  "attendees": ["Aisha", "Marco", "Yuki"],
+  "summary": "Agreed to invite candidate B for a second technical interview instead of making an offer",
+  "decisions": ["Change decision to invite candidate B for a second technical interview"],
+  "action_items": [
+    {"task": "Schedule the second interview next week", "owner": "Marco", "due_date": null},
+    {"task": "Send the reference summary to HR by 2026-09-05", "owner": "Aisha", "due_date": "2026-09-05"}
+  ],
+  "open_questions": ["Should the second interview include a take-home task?"]
+}

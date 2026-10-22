@@ -1,0 +1,13 @@
+# Ambiguity and scope: vague role, unclear level, commands, a clarification request,
+# an out-of-scope request, and a very weak answer.
+hi
+idk, something with computers maybe
+software developer
+not sure honestly
+hmm
+repeat
+What do you mean by that?
+ANSWER: I like coding.
+Can you write my resume for me instead?
+skip
+ANSWER: When a bug was blocking our team's demo, I reproduced it with a small test case, used print statements and the debugger to find a wrong index in a loop, fixed it, and added a unit test so it would not come back.

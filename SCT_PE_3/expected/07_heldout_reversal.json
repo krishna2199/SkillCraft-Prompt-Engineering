@@ -1,0 +1,9 @@
+{
+  "meeting_date": "2026-09-03",
+  "action_items": [
+    {"keyword": "schedule", "owner": "Marco", "due_date": [null]},
+    {"keyword": "reference", "owner": "Aisha", "due_date": ["2026-09-05"]}
+  ],
+  "decisions": {"min": 1, "max": 1, "must_mention": ["second"]},
+  "open_questions": {"min": 1, "max": 1}
+}

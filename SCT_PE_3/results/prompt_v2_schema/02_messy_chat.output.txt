@@ -1,0 +1,12 @@
+{
+  "meeting_title": "Client Meeting (Mon 2026-04-13)",
+  "meeting_date": "2026-04-13",
+  "attendees": ["Arjun", "Sofia", "Tom"],
+  "summary": "Agreed to keep payment terms unchanged and to fix the invoice template by end of week",
+  "decisions": ["Fix invoice template by end of week", "Check support for PDF and CSV export"],
+  "action_items": [
+    {"task": "Fix invoice template", "owner": "Tom", "due_date": "2026-04-17"},
+    {"task": "Check support for PDF and CSV export", "owner": "Arjun", "due_date": "2026-04-15"}
+  ],
+  "open_questions": ["Who will update the FAQ page?"]
+}

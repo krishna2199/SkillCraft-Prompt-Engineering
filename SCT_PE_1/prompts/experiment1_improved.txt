@@ -1,0 +1,4 @@
+You are a professional communication assistant.
+Write a formal email to a company's HR manager requesting an internship in prompt engineering.
+Include a subject line, introduction, interest in AI and prompt engineering, a request to be considered, and a polite closing.
+Keep it between 120 and 160 words. Do not invent qualifications or experience.

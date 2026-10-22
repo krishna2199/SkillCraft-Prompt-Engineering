@@ -1,0 +1,21 @@
+{
+  "meeting_title": "Website relaunch weekly sync",
+  "meeting_date": "2026-03-02",
+  "attendees": ["Priya", "Daniel", "Mei"],
+  "summary": "Agreed to launch new homepage version B on 2026-03-20",
+  "decisions": [
+    "launch date for new homepage is 2026-03-20",
+    "Daniel to integrate contact form by 2026-03-09",
+    "Mei to write alt text for product images by 2026-03-12",
+    "Priya to book usability test participants by 2026-03-06"
+  ],
+  "action_items": [
+    {"task": "book usability test participants", "owner": "Priya", "due_date": "2026-03-06"},
+    {"task": "integrate contact form", "owner": "Daniel", "due_date": "2026-03-09"},
+    {"task": "write alt text for product images", "owner": "Mei", "due_date": "2026-03-12"},
+    {"task": "book usability test participants", "owner": null, "due_date": null},
+    {"task": "integrate contact form", "owner": null, "due_date": null},
+    {"task": "write alt text for product images", "owner": null, "due_date": null}
+  ],
+  "open_questions": ["do we need a cookie banner for the new analytics tool?"]
+}

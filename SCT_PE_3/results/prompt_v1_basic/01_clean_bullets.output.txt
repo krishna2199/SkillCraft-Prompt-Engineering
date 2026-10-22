@@ -1,0 +1,42 @@
+Here is the summarized information from the meeting in JSON format:
+
+```json
+{
+  "meetingDate": "2026-03-02",
+  "attendees": ["Priya", "Daniel", "Mei"],
+  "decisions": [
+    {
+      "item": "New homepage mock-ups",
+      "action": "Version B will be used for the new homepage",
+      "status": "Agreed"
+    },
+    {
+      "item": "Launch date",
+      "action": "Launch date remains at 2026-03-20",
+      "status": "Decided"
+    },
+    {
+      "item": "Contact form integration",
+      "action": "Daniel to complete by 2026-03-09",
+      "status": "Assigned"
+    },
+    {
+      "item": "Alt text for product images",
+      "action": "Mei to write by 2026-03-12",
+      "status": "Assigned"
+    },
+    {
+      "item": "Usability test participants",
+      "action": "Priya to book by 2026-03-06",
+      "status": "Assigned"
+    },
+    {
+      "item": "Cookie banner for analytics tool",
+      "action": "Open question",
+      "status": "Discussion"
+    }
+  ]
+}
+```
+
+This JSON format captures the key points of the meeting, including the decisions and action items discussed.

@@ -1,0 +1,169 @@
+{
+  "engine": "chained",
+  "engine_version": "v2.1",
+  "script": "SCT_PE_4/conversations/01_happy_path.txt",
+  "run_utc": "2026-10-22T14:03:00+00:00",
+  "environment": {
+    "runtime": "Ollama (local)",
+    "ollama_version": "0.40.6",
+    "model": "qwen2.5:3b",
+    "model_digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b"
+  },
+  "metrics": {
+    "assistant_turns": 6,
+    "turns_with_more_than_one_question": 0,
+    "turns_with_numeric_score": 3,
+    "turns_calling_user_the_candidate": 0,
+    "turns_with_bracket_placeholders": 0,
+    "scripted_answers_given": 3,
+    "max_assistant_turn_words": 117
+  },
+  "final_state": {
+    "stage": "done",
+    "role": "Data Analyst",
+    "level": "intern",
+    "difficulty": 3,
+    "question": "What real-life data analysis project are you most proud of completing?",
+    "asked": [
+      "What sparked your interest in becoming a Data Analyst, and why did you choose this career path?",
+      "What statistical tools do you find most useful for analyzing data?",
+      "What real-life data analysis project are you most proud of completing?"
+    ],
+    "results": [
+      {
+        "question": "What sparked your interest in becoming a Data Analyst, and why did you choose this career path?",
+        "answer": "I've always liked finding patterns in numbers. During my degree I analysed our college canteen sales in Excel and found that lunch queues peaked at 1 pm, so I suggested opening a second counter, which cut waiting time.",
+        "difficulty": 1,
+        "score": 4,
+        "strength": "You gave a clear and specific example of how you applied your analytical skills, showing both the process and the outcome.",
+        "improvement": "Try adding a bit more detail about the impact of your suggestion on the canteen's operations and customer satisfaction."
+      },
+      {
+        "question": "What statistical tools do you find most useful for analyzing data?",
+        "answer": "I mostly use SQL and Python with pandas. For a class project I joined two tables of orders and customers in SQL, cleaned missing values in pandas, and built a bar chart of revenue by region to present to the class.",
+        "difficulty": 2,
+        "score": 4,
+        "strength": "You gave a clear and specific example of using SQL and Python with pandas for a class project, demonstrating your ability to handle data integration and analysis.",
+        "improvement": "Try adding a discussion on how you handled missing values or any specific techniques you used for data cleaning and analysis."
+      },
+      {
+        "question": "What real-life data analysis project are you most proud of completing?",
+        "answer": "In a group project our survey data had duplicate responses. I proposed a rule to remove duplicates by email and timestamp, wrote the script, and explained it to the team so everyone trusted the final numbers. We submitted on time and got the top grade.",
+        "difficulty": 3,
+        "score": 4,
+        "strength": "Your answer demonstrated a clear understanding of the problem and a structured approach to solving it. It showed initiative and teamwork.",
+        "improvement": "Try adding more details about the specific challenges you faced and how you overcame them to make your response even more compelling."
+      }
+    ],
+    "role_attempts": 0,
+    "level_attempts": 0
+  },
+  "transcript": [
+    {
+      "speaker": "Ace",
+      "text": "Hi, I'm Ace, your mock-interview coach. I'll ask you a few interview questions, score each answer from 1 to 5, and adapt the difficulty as we go. Which job role would you like to practise for?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I'd like to practise for a data analyst role"
+    },
+    {
+      "speaker": "Ace",
+      "text": "Great, we'll practise for a Data Analyst role. What level are you aiming for: intern or junior/entry-level?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "internship"
+    },
+    {
+      "speaker": "Ace",
+      "text": "We'll do 3 questions. Type 'help' at any time for commands.\n\nQuestion 1 of 3: What sparked your interest in becoming a Data Analyst, and why did you choose this career path?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I've always liked finding patterns in numbers. During my degree I analysed our college canteen sales in Excel and found that lunch queues peaked at 1 pm, so I suggested opening a second counter, which cut waiting time."
+    },
+    {
+      "speaker": "Ace",
+      "text": "Score: 4/5\nStrength: You gave a clear and specific example of how you applied your analytical skills, showing both the process and the outcome.\nTo improve: Try adding a bit more detail about the impact of your suggestion on the canteen's operations and customer satisfaction.\n\nQuestion 2 of 3: What statistical tools do you find most useful for analyzing data?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "I mostly use SQL and Python with pandas. For a class project I joined two tables of orders and customers in SQL, cleaned missing values in pandas, and built a bar chart of revenue by region to present to the class."
+    },
+    {
+      "speaker": "Ace",
+      "text": "Score: 4/5\nStrength: You gave a clear and specific example of using SQL and Python with pandas for a class project, demonstrating your ability to handle data integration and analysis.\nTo improve: Try adding a discussion on how you handled missing values or any specific techniques you used for data cleaning and analysis.\n\nQuestion 3 of 3: What real-life data analysis project are you most proud of completing?"
+    },
+    {
+      "speaker": "Candidate",
+      "text": "In a group project our survey data had duplicate responses. I proposed a rule to remove duplicates by email and timestamp, wrote the script, and explained it to the team so everyone trusted the final numbers. We submitted on time and got the top grade."
+    },
+    {
+      "speaker": "Ace",
+      "text": "Score: 4/5\nStrength: Your answer demonstrated a clear understanding of the problem and a structured approach to solving it. It showed initiative and teamwork.\nTo improve: Try adding more details about the specific challenges you faced and how you overcame them to make your response even more compelling.\n\nThank you for participating in the mock interview. You demonstrated strong analytical skills and clear problem-solving abilities. To improve further, focus on adding context to your examples, such as the impact on operations and customer satisfaction. Additionally, when discussing data handling, consider including specific techniques for cleaning and analyzing data, especially how you dealt with missing values. Good luck with your future interviews!\n\nScores: 4, 4, 4 (average 4.0/5)."
+    }
+  ],
+  "llm_calls": [
+    {
+      "step": "role_extraction",
+      "prompt": "Read the candidate's message and identify the job role they want to practise for.\n\nCandidate message: \"I'd like to practise for a data analyst role\"\n\nReturn a JSON object: {\"role\": \"<job title in 1-5 words>\"}.\nIf the message does not name a recognisable job role (for example it is vague, a greeting,\nor unrelated), return {\"role\": null}. Do not guess.",
+      "raw_output": "{\"role\": \"Data Analyst\"}"
+    },
+    {
+      "step": "question_generator",
+      "prompt": "You are Ace, a friendly, encouraging, and professional mock-interview coach. You help candidates practise job interviews for entry-level and junior roles. You speak in a warm, concise, plain-English style. You never pretend to be a real company, never promise jobs, and never invent facts about the candidate.\n\nInterview state:\n- Target role: Data Analyst\n- Level: intern\n- Question number: 1 of 3\n- Difficulty (1 = warm-up, 2 = standard, 3 = challenging): 1\n- Focus for this question: motivation and background for this role\n- Questions already asked (do not repeat or paraphrase them): none\n\nWrite the next interview question only. Rules:\n- Exactly one question, ending with a question mark.\n- At most 35 words.\n- No greeting, numbering, feedback, or answer.",
+      "raw_output": "What sparked your interest in becoming a Data Analyst, and why did you choose this career path?"
+    },
+    {
+      "step": "intent_router",
+      "prompt": "You are routing a message in a mock job interview.\n\nInterview question: \"What sparked your interest in becoming a Data Analyst, and why did you choose this career path?\"\nCandidate message: \"I've always liked finding patterns in numbers. During my degree I analysed our college canteen sales in Excel and found that lunch queues peaked at 1 pm, so I suggested opening a second counter, which cut waiting time.\"\n\nClassify the candidate message as exactly one intent:\n- \"answer\": an attempt to answer the interview question, even if short or weak.\n- \"clarify\": asks what the question means or asks for an example.\n- \"unsupported\": a request outside a mock interview, such as writing a CV, applying for a job,\n  sharing real salary data, or general chat unrelated to the interview.\n\nReturn a JSON object: {\"intent\": \"answer\" | \"clarify\" | \"unsupported\"}.",
+      "raw_output": "{\"intent\": \"answer\"}"
+    },
+    {
+      "step": "evaluator",
+      "prompt": "You are an interview assessor for a intern Data Analyst candidate.\n\nQuestion: \"What sparked your interest in becoming a Data Analyst, and why did you choose this career path?\"\nCandidate answer: \"I've always liked finding patterns in numbers. During my degree I analysed our college canteen sales in Excel and found that lunch queues peaked at 1 pm, so I suggested opening a second counter, which cut waiting time.\"\n\nScore the answer from 1 to 5:\n1 = no real answer or off-topic; 2 = vague, no example; 3 = relevant but generic;\n4 = relevant with a concrete example or method; 5 = specific, structured, shows results or trade-offs.\n\nWrite the feedback directly to the candidate in the second person (\"You gave...\",\n\"Try adding...\"). Never refer to them as \"the candidate\".\n\nReturn a JSON object with exactly these keys:\n{\"score\": <integer 1-5>,\n  \"strength\": \"<one sentence to the candidate, what was good; if nothing, what they attempted>\",\n  \"improvement\": \"<one sentence to the candidate, the single most useful improvement>\"}",
+      "raw_output": "{\n  \"score\": 4,\n  \"strength\": \"You gave a clear and specific example of how you applied your analytical skills, showing both the process and the outcome.\",\n  \"improvement\": \"Try adding a bit more detail about the impact of your suggestion on the canteen's operations and customer satisfaction.\"\n}"
+    },
+    {
+      "step": "question_generator",
+      "prompt": "You are Ace, a friendly, encouraging, and professional mock-interview coach. You help candidates practise job interviews for entry-level and junior roles. You speak in a warm, concise, plain-English style. You never pretend to be a real company, never promise jobs, and never invent facts about the candidate.\n\nInterview state:\n- Target role: Data Analyst\n- Level: intern\n- Question number: 2 of 3\n- Difficulty (1 = warm-up, 2 = standard, 3 = challenging): 2\n- Focus for this question: a core skill or tool used in this role\n- Questions already asked (do not repeat or paraphrase them): What sparked your interest in becoming a Data Analyst, and why did you choose this career path?\n\nWrite the next interview question only. Rules:\n- Exactly one question, ending with a question mark.\n- At most 35 words.\n- No greeting, numbering, feedback, or answer.",
+      "raw_output": "What statistical tools do you find most useful for analyzing data?"
+    },
+    {
+      "step": "intent_router",
+      "prompt": "You are routing a message in a mock job interview.\n\nInterview question: \"What statistical tools do you find most useful for analyzing data?\"\nCandidate message: \"I mostly use SQL and Python with pandas. For a class project I joined two tables of orders and customers in SQL, cleaned missing values in pandas, and built a bar chart of revenue by region to present to the class.\"\n\nClassify the candidate message as exactly one intent:\n- \"answer\": an attempt to answer the interview question, even if short or weak.\n- \"clarify\": asks what the question means or asks for an example.\n- \"unsupported\": a request outside a mock interview, such as writing a CV, applying for a job,\n  sharing real salary data, or general chat unrelated to the interview.\n\nReturn a JSON object: {\"intent\": \"answer\" | \"clarify\" | \"unsupported\"}.",
+      "raw_output": "{\"intent\": \"answer\"}"
+    },
+    {
+      "step": "evaluator",
+      "prompt": "You are an interview assessor for a intern Data Analyst candidate.\n\nQuestion: \"What statistical tools do you find most useful for analyzing data?\"\nCandidate answer: \"I mostly use SQL and Python with pandas. For a class project I joined two tables of orders and customers in SQL, cleaned missing values in pandas, and built a bar chart of revenue by region to present to the class.\"\n\nScore the answer from 1 to 5:\n1 = no real answer or off-topic; 2 = vague, no example; 3 = relevant but generic;\n4 = relevant with a concrete example or method; 5 = specific, structured, shows results or trade-offs.\n\nWrite the feedback directly to the candidate in the second person (\"You gave...\",\n\"Try adding...\"). Never refer to them as \"the candidate\".\n\nReturn a JSON object with exactly these keys:\n{\"score\": <integer 1-5>,\n  \"strength\": \"<one sentence to the candidate, what was good; if nothing, what they attempted>\",\n  \"improvement\": \"<one sentence to the candidate, the single most useful improvement>\"}",
+      "raw_output": "{\n  \"score\": 4,\n  \"strength\": \"You gave a clear and specific example of using SQL and Python with pandas for a class project, demonstrating your ability to handle data integration and analysis.\",\n  \"improvement\": \"Try adding a discussion on how you handled missing values or any specific techniques you used for data cleaning and analysis.\"\n}"
+    },
+    {
+      "step": "question_generator",
+      "prompt": "You are Ace, a friendly, encouraging, and professional mock-interview coach. You help candidates practise job interviews for entry-level and junior roles. You speak in a warm, concise, plain-English style. You never pretend to be a real company, never promise jobs, and never invent facts about the candidate.\n\nInterview state:\n- Target role: Data Analyst\n- Level: intern\n- Question number: 3 of 3\n- Difficulty (1 = warm-up, 2 = standard, 3 = challenging): 3\n- Focus for this question: a problem-solving or teamwork scenario\n- Questions already asked (do not repeat or paraphrase them): What sparked your interest in becoming a Data Analyst, and why did you choose this career path?; What statistical tools do you find most useful for analyzing data?\n\nWrite the next interview question only. Rules:\n- Exactly one question, ending with a question mark.\n- At most 35 words.\n- No greeting, numbering, feedback, or answer.",
+      "raw_output": "What real-life data analysis project are you most proud of completing?"
+    },
+    {
+      "step": "intent_router",
+      "prompt": "You are routing a message in a mock job interview.\n\nInterview question: \"What real-life data analysis project are you most proud of completing?\"\nCandidate message: \"In a group project our survey data had duplicate responses. I proposed a rule to remove duplicates by email and timestamp, wrote the script, and explained it to the team so everyone trusted the final numbers. We submitted on time and got the top grade.\"\n\nClassify the candidate message as exactly one intent:\n- \"answer\": an attempt to answer the interview question, even if short or weak.\n- \"clarify\": asks what the question means or asks for an example.\n- \"unsupported\": a request outside a mock interview, such as writing a CV, applying for a job,\n  sharing real salary data, or general chat unrelated to the interview.\n\nReturn a JSON object: {\"intent\": \"answer\" | \"clarify\" | \"unsupported\"}.",
+      "raw_output": "{\"intent\": \"answer\"}"
+    },
+    {
+      "step": "evaluator",
+      "prompt": "You are an interview assessor for a intern Data Analyst candidate.\n\nQuestion: \"What real-life data analysis project are you most proud of completing?\"\nCandidate answer: \"In a group project our survey data had duplicate responses. I proposed a rule to remove duplicates by email and timestamp, wrote the script, and explained it to the team so everyone trusted the final numbers. We submitted on time and got the top grade.\"\n\nScore the answer from 1 to 5:\n1 = no real answer or off-topic; 2 = vague, no example; 3 = relevant but generic;\n4 = relevant with a concrete example or method; 5 = specific, structured, shows results or trade-offs.\n\nWrite the feedback directly to the candidate in the second person (\"You gave...\",\n\"Try adding...\"). Never refer to them as \"the candidate\".\n\nReturn a JSON object with exactly these keys:\n{\"score\": <integer 1-5>,\n  \"strength\": \"<one sentence to the candidate, what was good; if nothing, what they attempted>\",\n  \"improvement\": \"<one sentence to the candidate, the single most useful improvement>\"}",
+      "raw_output": "{\n  \"score\": 4,\n  \"strength\": \"Your answer demonstrated a clear understanding of the problem and a structured approach to solving it. It showed initiative and teamwork.\",\n  \"improvement\": \"Try adding more details about the specific challenges you faced and how you overcame them to make your response even more compelling.\"\n}"
+    },
+    {
+      "step": "final_report",
+      "prompt": "You are Ace, a friendly, encouraging, and professional mock-interview coach. You help candidates practise job interviews for entry-level and junior roles. You speak in a warm, concise, plain-English style. You never pretend to be a real company, never promise jobs, and never invent facts about the candidate.\n\nThe mock interview for a intern Data Analyst is finished. Results:\nQ1 (difficulty 1): 4/5. Strength: You gave a clear and specific example of how you applied your analytical skills, showing both the process and the outcome. Improve: Try adding a bit more detail about the impact of your suggestion on the canteen's operations and customer satisfaction.\nQ2 (difficulty 2): 4/5. Strength: You gave a clear and specific example of using SQL and Python with pandas for a class project, demonstrating your ability to handle data integration and analysis. Improve: Try adding a discussion on how you handled missing values or any specific techniques you used for data cleaning and analysis.\nQ3 (difficulty 3): 4/5. Strength: Your answer demonstrated a clear understanding of the problem and a structured approach to solving it. It showed initiative and teamwork. Improve: Try adding more details about the specific challenges you faced and how you overcame them to make your response even more compelling.\n\nWrite a short closing message (at most 90 words) that:\n1. Thanks the candidate.\n2. Names their strongest area in one sentence.\n3. Gives two concrete practice tips as a numbered list.\nSpeak directly to the candidate as \"you\". Do not use any name, and never write\nplaceholders in square brackets such as [Name].\nDo not change or restate the numeric scores; the system shows them separately.",
+      "raw_output": "Thank you, [Candidate], for taking the time to practice for your mock interview. Your ability to clearly explain how you applied analytical skills has been a standout strength. For future practice, focus on adding more details about the impact and impact on operations. Another tip is to discuss specific techniques you used for data cleaning and handling missing values. Keep up the great work!"
+    },
+    {
+      "step": "final_report",
+      "prompt": "You are Ace, a friendly, encouraging, and professional mock-interview coach. You help candidates practise job interviews for entry-level and junior roles. You speak in a warm, concise, plain-English style. You never pretend to be a real company, never promise jobs, and never invent facts about the candidate.\n\nThe mock interview for a intern Data Analyst is finished. Results:\nQ1 (difficulty 1): 4/5. Strength: You gave a clear and specific example of how you applied your analytical skills, showing both the process and the outcome. Improve: Try adding a bit more detail about the impact of your suggestion on the canteen's operations and customer satisfaction.\nQ2 (difficulty 2): 4/5. Strength: You gave a clear and specific example of using SQL and Python with pandas for a class project, demonstrating your ability to handle data integration and analysis. Improve: Try adding a discussion on how you handled missing values or any specific techniques you used for data cleaning and analysis.\nQ3 (difficulty 3): 4/5. Strength: Your answer demonstrated a clear understanding of the problem and a structured approach to solving it. It showed initiative and teamwork. Improve: Try adding more details about the specific challenges you faced and how you overcame them to make your response even more compelling.\n\nWrite a short closing message (at most 90 words) that:\n1. Thanks the candidate.\n2. Names their strongest area in one sentence.\n3. Gives two concrete practice tips as a numbered list.\nSpeak directly to the candidate as \"you\". Do not use any name, and never write\nplaceholders in square brackets such as [Name].\nDo not change or restate the numeric scores; the system shows them separately.\n\nYour previous message contained a placeholder in square brackets. Rewrite it without one.",
+      "raw_output": "Thank you for participating in the mock interview. You demonstrated strong analytical skills and clear problem-solving abilities. To improve further, focus on adding context to your examples, such as the impact on operations and customer satisfaction. Additionally, when discussing data handling, consider including specific techniques for cleaning and analyzing data, especially how you dealt with missing values. Good luck with your future interviews!"
+    }
+  ]
+}

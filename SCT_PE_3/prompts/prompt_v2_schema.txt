@@ -1,0 +1,17 @@
+Extract structured information from the meeting notes below.
+
+Return ONLY a JSON object. Do not add any explanation and do not use Markdown code fences.
+Use exactly this schema:
+
+{
+  "meeting_title": string,
+  "meeting_date": "YYYY-MM-DD" or null,
+  "attendees": [string],
+  "summary": string (one sentence, at most 40 words),
+  "decisions": [string],
+  "action_items": [{"task": string, "owner": string or null, "due_date": "YYYY-MM-DD" or null}],
+  "open_questions": [string]
+}
+
+Meeting notes:
+{notes}

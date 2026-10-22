@@ -1,0 +1,11 @@
+{
+  "meeting_title": "Follow-up from Thursday's budget review",
+  "meeting_date": "2026-07-09",
+  "attendees": ["Ravi", "Chen"],
+  "summary": "Agreed on Q3 marketing budget and vendor list, and CRM tool comparison; events budget still undecided.",
+  "decisions": ["Marketing budget for Q3 approved at Q2 level", "Ravi: send revised vendor list to finance by 2026-07-14", "Chen: prepare CRM tool comparison and share before 2026-07-23"],
+  "action_items": [
+    {"task": "Events budget: determine Q4 or Q3 allocation", "owner": null, "due_date": null}
+  ],
+  "open_questions": ["Whether the events budget can move to Q4"]
+}

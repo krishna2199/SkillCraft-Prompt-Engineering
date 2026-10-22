@@ -1,0 +1,118 @@
+{
+  "environment": {
+    "runtime": "Ollama (local)",
+    "ollama_version": "0.40.6",
+    "model": "qwen2.5:3b",
+    "model_digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b"
+  },
+  "runs": [
+    {
+      "prompt_file": "SCT_PE_1/prompts/experiment1_original.txt",
+      "prompt": "Write an email asking for an internship.",
+      "output_file": "experiment1_original_seed42.md",
+      "response": "Subject: Inquiry About Internship Opportunity at [Your Company]\n\nDear [HR Manager's Name],\n\nI hope this email finds you well. My name is [Your Name], and I am writing to express my interest in the [Your Company] internship program. I am particularly drawn to [Your Company], which has always held a special place in my heart due to [mention a specific reason, like their products, services, or the company's values that appeal to you].\n\nI am currently a [Your Education Level] student at [Your University Name], and I am in the process of completing my [Your Major/Field of Study]. I have been following [Your Company] for a while now, and I have been particularly impressed with your company's commitment to [mention a specific aspect of the company, such as innovation, sustainability, or community involvement]. I am excited about the prospect of joining your team and contributing to your mission and vision.\n\nCould you please provide more information about the [Your Company] internship program, including the specific areas of work, the type of projects interns typically work on, and any other requirements or expectations that interns need to meet? I would also appreciate any insights into how interns have progressed from one level to the next within the company.\n\nI am available for a brief interview or a call to discuss how I can contribute to your team and how I can learn from your experienced professionals. I am also open to meeting you virtually or in person, depending on your preferences.\n\nThank you very much for considering my application. I look forward to the possibility of contributing to your team and learning from the experiences and expertise at [Your Company].\n\nBest regards,\n\n[Your Name]\n[Your Contact Information]\n[Your Email Address]",
+      "model": "qwen2.5:3b",
+      "options": {
+        "temperature": 0.7,
+        "seed": 42,
+        "num_predict": 2048
+      },
+      "json_mode": false,
+      "started_utc": "2026-10-22T13:03:31+00:00",
+      "eval_tokens": 349,
+      "prompt_tokens": 37,
+      "total_seconds": 47.55,
+      "done_reason": "stop"
+    },
+    {
+      "prompt_file": "SCT_PE_1/prompts/experiment1_improved.txt",
+      "prompt": "You are a professional communication assistant.\nWrite a formal email to a company's HR manager requesting an internship in prompt engineering.\nInclude a subject line, introduction, interest in AI and prompt engineering, a request to be considered, and a polite closing.\nKeep it between 120 and 160 words. Do not invent qualifications or experience.",
+      "output_file": "experiment1_improved_seed42.md",
+      "response": "**Subject:** Request for Consideration for Internship in Prompt Engineering\n\nI hope this email finds you well. I am writing to express my interest in the internship opportunity in prompt engineering at your esteemed company. I am particularly drawn to your work in AI, as I find the field of prompt engineering fascinating, as it lies at the intersection of natural language processing and machine learning. I am confident that I would be a valuable addition to your team. I kindly request your consideration for this position. Thank you for your time and attention to this matter.\n\nBest regards,\n[Your Name]",
+      "model": "qwen2.5:3b",
+      "options": {
+        "temperature": 0.7,
+        "seed": 42,
+        "num_predict": 2048
+      },
+      "json_mode": false,
+      "started_utc": "2026-10-22T13:04:21+00:00",
+      "eval_tokens": 117,
+      "prompt_tokens": 99,
+      "total_seconds": 17.08,
+      "done_reason": "stop"
+    },
+    {
+      "prompt_file": "SCT_PE_1/prompts/experiment2_original.txt",
+      "prompt": "Explain binary search.",
+      "output_file": "experiment2_original_seed42.md",
+      "response": "Binary search is an efficient algorithm for finding an item from a sorted list of items. It works by repeatedly dividing in half the portion of the list that could contain the item, until you've narrowed down the possible locations to just one. Here's a step-by-step explanation of how binary search operates:\n\n### Steps of Binary Search:\n\n1. **Initialization**: Start with a sorted list (or array). Initialize two pointers, `low` and `high`. The `low` pointer starts at the beginning (index 0) of the list, and the `high` pointer starts at the end (index of the last element).\n\n2. **Loop Condition**: Continue the search as long as `low` is less than or equal to `high`.\n\n3. **Finding the Middle Point**: Calculate the middle point of the list. This is done by finding the average of `low` and `high`, and then taking the floor or ceiling of this average. If the list has an even number of elements, the `high` should be adjusted to ensure the division is balanced.\n\n4. **Comparison**: Compare the middle element with the target value:\n   - If the middle element is equal to the target value, the search is successful, and you return the index of the middle element.\n   - If the middle element is less than the target value, the target must be in the right half of the current range. So, you set `low` to `middle + 1` to search in the right half.\n   - If the middle element is greater than the target value, the target must be in the left half of the current range. So, you set `high` to `middle - 1` to search in the left half.\n\n5. **Termination**: If the loop ends without finding the target, the target is not in the list, and you can return a message indicating the target is not found.\n\n### Example:\nLet's say you have a sorted list `[1, 2, 3, 4, 5, 6, 7, 8, 9]` and you're looking for the value `6`.\n\n1. Initialize `low = 0` and `high = 8`.\n2. Calculate the middle point: `middle = (0 + 8) // 2 = 4`, so the middle element is `5`.\n3. Since `5` is less than `6`, the target must be in the right half. So, we set `low = 5`.\n4. Calculate the new middle point: `middle = (5 + 8) // 2 = 6`, so the middle element is `7`.\n5. Since `7` is greater than `6`, the target must be in the left half. So, we set `high = 5`.\n6. Calculate the new middle point: `middle = (0 + 5) // 2 = 2`, so the middle element is `2`.\n7. Since `2` is less than `6`, the target must be in the right half. So, we set `low = 3`.\n8. Calculate the new middle point: `middle = (3 + 5) // 2 = 4`, so the middle element is `4`.\n9. Since `4` is less than `6`, the target must be in the right half. So, we set `low = 5`.\n10. Calculate the new middle point: `middle = (5 + 5) // 2 = 5`, so the middle element is `5`.\n11. Since `5` is less than `6`, the target must be in the right half. So, we set `low = 6`.\n12. Calculate the new middle point: `middle = (6 + 5) // 2 = 5`, so the middle element is `5`.\n13. Since `5` is less than `6`, the target must be in the right half. So, we set `low = 6`.\n14. Calculate the new middle point: `middle = (6 + 5) // 2 = 5`, so the middle element is `5`.\n15. Since `5` is less than `6`, the target must be in the right half. So, we set `low = 6`.\n16. Calculate the new middle point: `middle = (6 + 5) // 2 = 5`, so the middle element is `5`.\n17. Since `5` is less than `6`, the target must be in the right half. So, we set `low = 6`.\n18. Calculate the new middle point: `middle = (6 + 5) // 2 = 5`, so the middle element is `5`.\n19. Since `5` is less than `6`, the target must be in the right half. So, we set `low = 6`.\n20. Calculate the new middle point: `middle = (6 + 5) // 2 = 5`, so the middle element is `5`.\n21. Since `5` is less than `6`, the target must be in the right half. So, we set `low = 6`.\n22. Calculate the new middle point: `middle = (6 + 5) // 2 = 5`, so the middle element is `5`.\n23. Since `5` is less than `6`, the target must be in the right half. So, we set `low = 6`.\n24. Calculate the new middle point: `middle = (6 + 5) // 2 = 5`, so the middle element is `5`.\n25. Since `5` is less than `6`, the target must be in the right half. So, we set `low = 6`.\n26. Calculate the new middle point: `middle = (6 + 5) // 2 = 5`, so the middle element is `5`.\n27. Since `5` is less than `6`, the target must be in the right half. So, we set `low = 6`.\n28. Calculate the new middle point: `middle = (6 + 5) // 2 = 5`, so the middle element is `5`.\n29. Since `5` is less than `6`, the target must be in the right half. So, we set `low = 6`.\n30. Calculate the new middle point: `middle = (6 + 5) // 2 = 5`, so the middle element is `5`.\n31. Since `5` is less than `6`, the target must be in the right half. So, we set `low = 6`.\n32. Calculate the new middle point: `middle = (6 + 5) // 2 = 5`, so the middle element is `5`.\n33. Since `5` is less than `6`, the target must be in the right half. So, we set `low = 6`.\n34. Calculate the new middle point: `middle = (6 + 5) // 2 = 5`, so the middle element is `5`.\n35. Since `5` is less than `6`, the target must be in the right half. So, we set `low = 6`.\n36. Calculate the new middle point: `middle = (6 + 5) // 2 = 5`, so the middle element is `5`.\n37. Since `5` is less than `6`, the target must be in the right half. So, we set `low = 6`.\n38. Calculate the new middle point: `middle = (6 + 5) // 2 = 5`, so the middle element is `5`.\n39. Since `5` is less than `6`, the target must be in the right half. So, we set `low = 6`.\n40. Calculate the new middle point: `middle = (6 + 5) // 2 = 5`, so the middle element is `5`.\n41. Since `5` is less than `6`, the target must be in the right half. So, we set `low = 6`.\n42. Calculate the new middle point: `middle = (6 + 5) // 2 = 5`, so the middle element is `5`.\n43. Since `5` is less than `6`, the target must be in the right half. So, we set `low = 6`.\n44. Calculate the new middle point: `middle = (6 + 5) // 2 = 5`, so the middle element is `5`.\n45. Since `5` is less than `6`, the target must be in the right half. So, we set `low = 6`.\n46. Calculate the new middle point: `middle = (6 + 5) // 2 = 5`, so the middle element is `5`.\n47. Since `5` is less than `6`, the target must be in the right half. So, we set `low = 6`.\n48. Calculate the new middle point: `middle = (6 + 5) // 2 = 5`, so the middle element is `5`.\n49. Since `5` is less than `6`, the target must be in the right half. So, we set `low = 6`.\n50. Calculate the new middle point: `middle = (6 + 5) // 2 = 5`, so the middle element is `5`.\n51. Since `5` is less than `",
+      "model": "qwen2.5:3b",
+      "options": {
+        "temperature": 0.7,
+        "seed": 42,
+        "num_predict": 2048
+      },
+      "json_mode": false,
+      "started_utc": "2026-10-22T13:04:40+00:00",
+      "eval_tokens": 2048,
+      "prompt_tokens": 34,
+      "total_seconds": 283.04,
+      "done_reason": "length"
+    },
+    {
+      "prompt_file": "SCT_PE_1/prompts/experiment2_improved.txt",
+      "prompt": "Act as a computer science tutor for beginners.\nExplain binary search in simple English using the sorted array [2, 5, 8, 12, 16, 23, 38] to find 16.\nShow each step, explain why half the search space is eliminated, provide pseudocode, state time complexity, and mention that the input must be sorted.",
+      "output_file": "experiment2_improved_seed42.md",
+      "response": "Certainly! Let's walk through a simple example of how a binary search algorithm works on a sorted array. We will use the array [2, 5, 8, 12, 16, 23, 38] and we are looking for the number 16.\n\n### Example Array: [2, 5, 8, 12, 16, 23, 38]\nWe are looking for the number: **16**\n\n### Step-by-Step Explanation of Binary Search\n\n#### Step 1: Initialization\n- Start with a sorted array: [2, 5, 8, 12, 16, 23, 38]\n- The target value we are looking for: 16\n\n#### Step 2: First Comparison\n- The middle index of the array is the index of the middle element, which is \\( \\text{mid} = \\left\\lfloor \\frac{0 + 6}{2} \\right\\rfloor = 3 \\).\n- The middle element is at index 3, so the element is 12.\n- Compare 12 to 16.\n- Since 12 < 16, we know that 16 cannot be in the left half of the array. Therefore, we will search the right half of the array.\n\n#### Step 3: Second Comparison\n- The right half of the array starts from index 4 (the index after the middle index).\n- The new middle index is \\( \\text{mid} = \\left\\lfloor \\frac{4 + 6}{2} \\right\\rfloor = 5 \\).\n- The element at index 5 is 23.\n- Compare 23 to 16.\n- Since 23 > 16, we know that 16 cannot be in the right half of the array. Therefore, we will search the left half of the array.\n\n#### Step 4: Third Comparison\n- The left half of the array starts from index 4.\n- The new middle index is \\( \\text{mid} = \\left\\lfloor \\frac{4 + 3}{2} \\right\\rfloor = 3 \\).\n- The element at index 3 is 12.\n- Compare 12 to 16.\n- Since 12 < 16, we know that 16 cannot be in the left half of the array. Therefore, we will search the right half of the array.\n\n#### Step 5: Fourth Comparison\n- The right half of the array starts from index 4 (the index after the middle index).\n- The new middle index is \\( \\text{mid} = \\left\\lfloor \\frac{4 + 6}{2} \\right\\rfloor = 5 \\).\n- The element at index 5 is 23.\n- Compare 23 to 16.\n- Since 23 > 16, we know that 16 cannot be in the right half of the array. Therefore, we will search the left half of the array.\n\n#### Step 6: Fifth Comparison\n- The left half of the array starts from index 4.\n- The new middle index is \\( \\text{mid} = \\left\\lfloor \\frac{4 + 3}{2} \\right\\rfloor = 3 \\).\n- The element at index 3 is 12.\n- Compare 12 to 16.\n- Since 12 < 16, we know that 16 cannot be in the left half of the array. Therefore, we will search the right half of the array.\n\n#### Step 7: Sixth Comparison\n- The right half of the array starts from index 4 (the index after the middle index).\n- The new middle index is \\( \\text{mid} = \\left\\lfloor \\frac{4 + 6}{2} \\right\\rfloor = 5 \\).\n- The element at index 5 is 23.\n- Compare 23 to 16.\n- Since 23 > 16, we know that 16 cannot be in the right half of the array. Therefore, we will search the left half of the array.\n\n#### Step 8: Seventh Comparison\n- The left half of the array starts from index 4.\n- The new middle index is \\( \\text{mid} = \\left\\lfloor \\frac{4 + 3}{2} \\right\\rfloor = 3 \\).\n- The element at index 3 is 12.\n- Compare 12 to 16.\n- Since 12 < 16, we know that 16 cannot be in the left half of the array. Therefore, we will search the right half of the array.\n\n#### Step 9: Eighth Comparison\n- The right half of the array starts from index 4 (the index after the middle index).\n- The new middle index is \\( \\text{mid} = \\left\\lfloor \\frac{4 + 6}{2} \\right\\rfloor = 5 \\).\n- The element at index 5 is 23.\n- Compare 23 to 16.\n- Since 23 > 16, we know that 16 cannot be in the right half of the array. Therefore, we will search the left half of the array.\n\n#### Step 10: Ninth Comparison\n- The left half of the array starts from index 4.\n- The new middle index is \\( \\text{mid} = \\left\\lfloor \\frac{4 + 3}{2} \\right\\rfloor = 3 \\).\n- The element at index 3 is 12.\n- Compare 12 to 16.\n- Since 12 < 16, we know that 16 cannot be in the left half of the array. Therefore, we will search the right half of the array.\n\n#### Step 11: Tenth Comparison\n- The right half of the array starts from index 4 (the index after the middle index).\n- The new middle index is \\( \\text{mid} = \\left\\lfloor \\frac{4 + 6}{2} \\right\\rfloor = 5 \\).\n- The element at index 5 is 23.\n- Compare 23 to 16.\n- Since 23 > 16, we know that 16 cannot be in the right half of the array. Therefore, we will search the left half of the array.\n\n#### Step 12: Eleventh Comparison\n- The left half of the array starts from index 4.\n- The new middle index is \\( \\text{mid} = \\left\\lfloor \\frac{4 + 3}{2} \\right\\rfloor = 3 \\).\n- The element at index 3 is 12.\n- Compare 12 to 16.\n- Since 12 < 16, we know that 16 cannot be in the left half of the array. Therefore, we will search the right half of the array.\n\n### Conclusion\nWe have now narrowed down the search space to the left half of the array. The element at index 3 is 12, and the element at index 4 is 16.\n\nThus, the number 16 is found at index 4 in the array.\n\n### Pseudocode for Binary Search\n```pseudocode\nfunction binary_search(arr, target):\n    left = 0\n    right = length of arr - 1\n    \n    while left <= right:\n        mid = left + floor((right - left) / 2)\n        \n        if arr[mid] == target:\n            return mid\n        \n        if arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    \n    return -1  // If target is not found\n```\n\n### Time Complexity\nBinary search has a time complexity of \\(O(\\log n)\\), where \\(n\\) is the number of elements in the array. This is because each comparison effectively halves the search space.\n\n### Conclusion\nTo summarize, binary search is a powerful algorithm for finding elements in a sorted array. It works by repeatedly dividing the search space in half and comparing the target value with the middle element of the current search space. This method significantly reduces the search time, making it very efficient for sorted data.",
+      "model": "qwen2.5:3b",
+      "options": {
+        "temperature": 0.7,
+        "seed": 42,
+        "num_predict": 2048
+      },
+      "json_mode": false,
+      "started_utc": "2026-10-22T13:09:25+00:00",
+      "eval_tokens": 1791,
+      "prompt_tokens": 110,
+      "total_seconds": 246.66,
+      "done_reason": "stop"
+    },
+    {
+      "prompt_file": "SCT_PE_1/prompts/experiment3_original.txt",
+      "prompt": "Make a social media post for my business.",
+      "output_file": "experiment3_original_seed42.md",
+      "response": "Sure, I'd be happy to help you create a social media post for your business! To make it more tailored and effective, could you please tell me a bit more about your business and what you're promoting? For example, what industry are you in, what do you offer, and what's the main message or benefit you want to convey? This will help me create a more engaging and relevant post for your audience.",
+      "model": "qwen2.5:3b",
+      "options": {
+        "temperature": 0.7,
+        "seed": 42,
+        "num_predict": 2048
+      },
+      "json_mode": false,
+      "started_utc": "2026-10-22T13:13:33+00:00",
+      "eval_tokens": 86,
+      "prompt_tokens": 38,
+      "total_seconds": 10.37,
+      "done_reason": "stop"
+    },
+    {
+      "prompt_file": "SCT_PE_1/prompts/experiment3_improved.txt",
+      "prompt": "Act as a social media copywriter for a small business offering website development and business automation. \nWrite a LinkedIn post for small-business owners who spend too much time on repetitive work. \nInclude an engaging hook, two practical benefits, and a clear call to action. Keep it between 100 and 140 words. \nUse a credible tone, no fabricated statistics or testimonials, and at most three relevant hashtags.",
+      "output_file": "experiment3_improved_seed42.md",
+      "response": "Unlock the potential of your small business with efficient website development and automation tools. Spend less time on repetitive tasks and more on growing your business. Invest in a custom website and automation solutions today. #DigitalTransformation #SmallBusinessGrowth #WebsitesAndAutomation",
+      "model": "qwen2.5:3b",
+      "options": {
+        "temperature": 0.7,
+        "seed": 42,
+        "num_predict": 2048
+      },
+      "json_mode": false,
+      "started_utc": "2026-10-22T13:13:46+00:00",
+      "eval_tokens": 52,
+      "prompt_tokens": 115,
+      "total_seconds": 6.6,
+      "done_reason": "stop"
+    }
+  ]
+}

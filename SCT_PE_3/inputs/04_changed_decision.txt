@@ -1,0 +1,8 @@
+Product team meeting - 2026-06-01
+People: Omar (PM), Grace (design), Felix (backend)
+
+Initially we decided to ship dark mode in v2.3, but after Felix explained the theming refactor risk, the team reversed this: dark mode moves to v2.4. v2.3 will ship with the bug fixes only.
+Grace: update the v2.4 design specs for dark mode - due 2026-06-15.
+Felix: write a short risk note about the theming refactor, due 2026-06-05.
+Need to tell the support team about the change, owner not decided yet.
+Question still open: should dark mode follow the OS setting by default?
